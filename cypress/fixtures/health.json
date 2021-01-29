@@ -1,0 +1,6 @@
+{
+  "urlBase": "http://localhost:8280",
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}
