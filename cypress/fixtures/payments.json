@@ -1,0 +1,27 @@
+{
+  "urlBase": "http://ecommerce-api.ms.qa",
+  "headers": {
+    "Content-Type": "application/json",
+    "x-picpay-token": "6da91c3a-e21f-4afb-b19f-3ff9caf0fd1e"
+  },
+  "paymentIntentBody":{
+    "referenceId": "5484534541358002",
+    "callbackUrl": "http://polenta-inc.herokuapp.com/api/chupacabra/payments",
+    "expiresAt": "2050-12-8T16:00:00-04:00",
+    "returnUrl": "http://polenta-inc.herokuapp.com/api/chupacabra/payments",
+    "value": 1,
+    "plugin": "magento2",
+    "channel": "my-channel",
+    "purchaseMode": "in-store",
+    "additionalInfo": [
+      null
+    ],
+    "buyer": {
+      "firstName": "João",
+      "lastName": "da Silva",
+      "document": "08486157609",
+      "email": "joao.checkout@picpay.com",
+      "phone": "11948453978"
+    } 
+  }
+}
