@@ -4,8 +4,7 @@ import helpPaymentFlow from "../support/helpers/helpers-payments"
 
 describe('Fluxo de pagamento', () => {
   beforeEach(()=>{
-    let test = cy.NathAjudando()
-    cy.log(test)
+    helpPaymentFlow.helperBodyPaymentIntent()
   })
   it('Gerar intenção de pagamento', () => {
     reqPaymentFlow.requestPaymentIntent()
