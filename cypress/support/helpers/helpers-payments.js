@@ -1,21 +1,12 @@
-import { reject, resolve } from "bluebird"
-
 class HelpersPayment {
   helperBodyPaymentIntent(){
-    function updateReferenceId () {
-      const AddId = 1
       cy.readFile('cypress/fixtures/payments.json').should((data) => {
-        globalThis.previousReferenceId = data.paymentIntentBody.referenceId
-        laterReferenceId = Number(previousReferenceId) + AddId
+        let previousData = data
+        let teste = Number(previousData.paymentIntentBody.referenceId) + 1
+        previousData.paymentIntentBody.referenceId = teste.toString()
+        cy.writeFile('cypress/fixtures/payments.json', JSON.stringify(previousData))
+        return previousData
       })
-      cy.writeFile('cypress/fixtures/payments.json', {
-        referenceId: laterReferenceId
-      })
-    }
-    new Cypress.Promise((resolve, reject) =>{
-      resolve(updateReferenceId)
-    })
-    return data.paymentIntentBody
   }
 }
 export default new HelpersPayment ()
