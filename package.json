@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "cypress": "^4.8.0",
     "cypress-plugin-tab": "^1.0.5",
     "cypress-xpath": "^1.4.0",
@@ -34,7 +33,6 @@
     "ncp": "^2.0.0"
   },
   "devDependencies": {},
-=======
     "bluebird": "^3.7.2",
     "cypress-plugin-tab": "^1.0.5",
     "cypress-xpath": "^1.4.0",
@@ -62,7 +60,6 @@
     "eslint-plugin-prettier": "^3.2.0",
     "prettier": "^2.2.1"
   },
->>>>>>> origin/payment_flow_ecommerce
   "husky": {
     "hooks": {
       "pre-commit": "npx eslint ./cypress --fix"
